@@ -1,0 +1,79 @@
+/*
+    Changes Made for CSS Theme:
+
+        - changed the overall font family to Segoe UI
+        - all h2 text shadows were changed to pink
+        - the body now has an animated gradient background
+        - changed the background image of some of the sections
+        - adjusted the sections to have a different font of Times New Roman
+        - sections have different box and text shadow colors
+        - nav bar elements are now pink and underlined
+        - the color of the nav bar element is now gray when you hover over rather than light gray
+        - main nav bar logo has a glowing pink text to match the other colors and stick out more
+
+*/
+
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+}
+
+h2{
+    text-shadow: 2px 2px 8px rgb(253, 50, 165);
+}
+
+body{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 500% 500%;
+	animation: gradient 8s ease infinite;
+	height: 100vh;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#about{
+    background-image: url("images/background.jpg");
+    box-shadow: 0 0 4px 4px rgb(206, 194, 194) inset;
+    color: black;
+    text-shadow: 2px 2px 8px rgb(20, 195, 87);
+    font-family: 'Times New Roman', Times, serif;
+}
+#projects{
+    background-image: url("images/background.jpg");
+    box-shadow: 0 0 4px 4px rgb(241, 240, 240) inset;
+    color: black;
+    text-shadow: 2px 2px 8px rgb(20, 195, 87);
+}
+.navbar a{
+    text-decoration: underline;
+    color:pink;
+}
+
+.navbar-logo {
+    color: #fff;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+a:hover{
+    background-color: gray;
+}
